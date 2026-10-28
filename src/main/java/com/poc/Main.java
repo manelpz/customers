@@ -9,7 +9,23 @@ public class Main {
 
             
             MySqlCRUD mysql1 = new MySqlCRUD(); 
+          
+            //update
+            //mysql1.updateCustomer(c1.getID(), "elopez@ibero.com");
 
+            //insert
+            //mysql1.insertCustomer(c1);
+
+            //seleccionar
+            //mysql1.selectCustomer();
+
+            //seleccionar por id
+            //mysql1.selectCustomerById(c1.getID());
+            
+            //delete
+            mysql1.deleteCustomerById(c1.getID());
+
+            //cerrar conexion
             mysql1.close();
     }
 }

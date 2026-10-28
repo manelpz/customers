@@ -16,6 +16,23 @@ public class Customer {
         this._email = email;
     }
 
+    public int getID(){
+        return _id;
+    }
 
+     public String getFirstName() {
+        return _firstName;
+    }
+
+    public String getLastName() {
+        return _lastName;
+    }
+
+    public int getAge() {
+        return _age;
+    }
     
+    public String getEmail() {
+        return _email;
+    }
 }
