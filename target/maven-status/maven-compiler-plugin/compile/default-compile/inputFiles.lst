@@ -1,2 +1,6 @@
-/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/Customer.java
 /Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/Main.java
+/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/model/Customer.java
+/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/repository/MongoCRUD.java
+/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/repository/MySqlCRUD.java
+/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/service/CustomerServiceMongo.java
+/Users/emmanuellopezguerrero/Documents/GitHub/customers/src/main/java/com/poc/service/CustomerServiceMySQL.java

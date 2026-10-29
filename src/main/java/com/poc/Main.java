@@ -1,5 +1,11 @@
 package com.poc;
 
+import com.poc.model.Customer;
+import com.poc.repository.MySqlCRUD;
+import com.poc.repository.MongoCRUD;
+import com.poc.service.CustomerServiceMongo;
+import com.poc.service.CustomerServiceMySQL;
+
 public class Main {
     public static void main(String[] args) {
         
@@ -7,25 +13,48 @@ public class Main {
             Customer c1  = new Customer(1, "emmanuel", "lopez", 36, "emmanuel@ibero.com");
             Customer c2  = new Customer(2, "josé", "castro", 70, "jose@gmail.com");
 
-            
-            MySqlCRUD mysql1 = new MySqlCRUD(); 
-          
-            //update
-            //mysql1.updateCustomer(c1.getID(), "elopez@ibero.com");
+            MongoCRUD mongo1 = new MongoCRUD(); 
+            CustomerServiceMongo mongoService = new CustomerServiceMongo();
+
+             //update
+            /*mongoService.updateCustomer(c1.getID(), "elopez@ibero.com");
 
             //insert
-            //mysql1.insertCustomer(c1);
+            mongoService.insertCustomer(c1);
 
             //seleccionar
-            //mysql1.selectCustomer();
+            mongoService.selectCustomer();
 
             //seleccionar por id
-            //mysql1.selectCustomerById(c1.getID());
+            mongoService.selectCustomerById(c1.getID());
             
             //delete
-            mysql1.deleteCustomerById(c1.getID());
+            mongoService.deleteCustomerById(c1.getID());*/
 
             //cerrar conexion
-            mysql1.close();
+            mongo1.close();
+
+
+
+            /*MySqlCRUD mysql1 = new MySqlCRUD(); 
+            CustomerServiceMySQL mysqlService = new CustomerServiceMySQL(mysql1.getConnection());
+          
+            //update
+            mysqlService.updateCustomer(c1.getID(), "elopez@ibero.com");
+
+            //insert
+            mysqlService.insertCustomer(c1);
+
+            //seleccionar
+            mysqlService.selectCustomer();
+
+            //seleccionar por id
+            mysqlService.selectCustomerById(c1.getID());
+            
+            //delete
+            mysqlService.deleteCustomerById(c1.getID());
+
+            //cerrar conexion
+            mysql1.close();*/
     }
 }

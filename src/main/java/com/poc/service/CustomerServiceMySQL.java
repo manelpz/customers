@@ -1,31 +1,23 @@
-package com.poc;
+package com.poc.service;
 
-import java.io.FileInputStream;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
 
-public class MySqlCRUD {
+import com.poc.model.Customer;
+import com.poc.repository.MySqlCRUD;
+
+public class CustomerServiceMySQL {
 
     private Connection _connection;
 
-    public MySqlCRUD(){
-        try {
-            Properties config = new Properties();
-            config.load(new FileInputStream("src/main/resources/config.properties"));
-            _connection = DriverManager.getConnection(
-                    config.getProperty("mysql.url"),
-                    config.getProperty("mysql.username"),
-                    config.getProperty("mysql.password"));
+    public CustomerServiceMySQL(Connection connectionEntrante){
 
-        } catch (Exception e) {
-            System.out.println("Error al conectar a mysql: " +e.getMessage() );
-
-        }
+       this._connection = connectionEntrante;
     }
+
+
 
     public void insertCustomer(Customer customer){
          try {
@@ -107,16 +99,6 @@ public class MySqlCRUD {
     }
 
     
-
-    public void close(){
-
-        try {
-            _connection.close();
-        } catch (Exception e) {
-           
-              System.out.println("Error al cerrar a mysql: " +e.getMessage() );
-        }
-    }
 
 
     

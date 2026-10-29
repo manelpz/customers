@@ -1,2 +1,6 @@
+com/poc/service/CustomerServiceMongo.class
+com/poc/repository/MongoCRUD.class
+com/poc/repository/MySqlCRUD.class
+com/poc/model/Customer.class
+com/poc/service/CustomerServiceMySQL.class
 com/poc/Main.class
-com/poc/Customer.class
